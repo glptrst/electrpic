@@ -1,0 +1,15 @@
+{
+  "name": "electronpic",
+  "version": "1.0.0",
+  "description": "download insta pics",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gp",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "electron": "^10.1.1"
+  }
+}
