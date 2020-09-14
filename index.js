@@ -29,8 +29,8 @@ ipcMain.handle('perform-action', (event, ...args) => {
 
 function createWindow () {
   win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 650,
+    height: 250,
     webPreferences: {
       nodeIntegration: true
     }
