@@ -52,7 +52,7 @@
 
       <footer class="mastfoot mt-auto">
 	<div class="inner">
-	  <p><a href="https://github.com/glptrst/getinstapic" style="color: white"><i class="fab fa-github"></i></a></p>
+	  <p><a id="gh-link" href="https://github.com/glptrst/electrpic" style="color: white"><i class="fab fa-github"></i></a></p>
 	</div>
       </footer>
     </div>
@@ -61,12 +61,20 @@
 
 <script>
   const { ipcRenderer } = require('electron');
-  
+  const { shell } = require('electron')
+
   let button = document.getElementsByTagName('button')[0];
   let input = document.getElementsByTagName('input')[0];
 
- button.addEventListener('click', () => {
-   ipcRenderer.invoke('perform-action', input.value);
- });
- 
+  button.addEventListener('click', () => {
+	ipcRenderer.invoke('perform-action', input.value);
+  });
+
+  document.getElementById('gh-link').addEventListener('click', (e) => {
+	e.preventDefault();
+	shell.openExternal('https://github.com/glptrst/electrpic')
+  })
+
+  // const { shell } = require('electron')
+  // shell.openExternal('https://github.com')
 </script>
